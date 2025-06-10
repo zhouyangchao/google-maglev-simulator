@@ -1,0 +1,13 @@
+# Batch mode example - will exit after execution
+# This file ends with 'quit' so no interactive mode
+
+init 37
+add server1
+add server2
+add server3
+add server4
+show nodes
+show maglev
+
+# Exit after completion
+quit

@@ -1,0 +1,27 @@
+# Load Balancing Test Script
+# Tests how Maglev handles node additions and removals
+
+# Start with a moderately sized table
+init 37
+
+# Add initial servers
+add web01
+add web02
+add web03
+show maglev
+
+# Simulate server failure - remove one node
+add web02
+show maglev
+
+# Add a new server to replace the failed one
+add web04
+show maglev
+
+# Add more servers to test scaling
+add web05
+add web06
+show maglev
+
+# Final state
+show nodes
